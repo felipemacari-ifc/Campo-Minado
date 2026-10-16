@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#121213">
+  <title>Campo Minado</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <h1>CAMPO MINADO</h1>
+    <p>Encontre todas as casas seguras.</p>
+  </header>
+
+  <main class="game">
+    <section class="controls">
+      <label>
+        Dificuldade
+        <select id="difficulty">
+          <option value="easy">Fácil — 9 × 9</option>
+          <option value="medium">Médio — 16 × 16</option>
+          <option value="hard">Difícil — 16 × 30</option>
+        </select>
+      </label>
+
+      <button id="restartBtn" class="restart-btn" type="button">
+        Novo jogo
+      </button>
+    </section>
+
+    <section class="status">
+      <div class="status-card">
+        <span>Minas restantes</span>
+        <strong id="mineCounter">010</strong>
+      </div>
+
+      <div class="status-card">
+        <span>Tempo</span>
+        <strong id="timer">000</strong>
+      </div>
+    </section>
+
+    <div id="message" role="status" aria-live="polite">
+      Escolha uma casa para começar.
+    </div>
+
+    <div class="board-wrapper">
+      <div id="board" aria-label="Tabuleiro do Campo Minado"></div>
+    </div>
+
+    <p class="instructions">
+      Clique para revelar uma casa. Clique com o botão direito para colocar
+      uma bandeira. No celular, use o botão de bandeira.
+    </p>
+
+    <button id="flagModeBtn" class="flag-mode" type="button">
+      🚩 Modo bandeira: desligado
+    </button>
+  </main>
+
+  <footer>
+    Campo Minado · HTML, CSS e JavaScript
+  </footer>
+</body>
+</html>
